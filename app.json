@@ -4,38 +4,41 @@
     "slug": "my-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
     "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "statusBar": {
+        "barStyle": "light-content"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "statusBar": {
+        "backgroundColor": "#000000",
+        "barStyle": "light-content",
+        "translucent": true
       }
     },
     "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ]
-    ],
-    "experiments": {
-      "typedRoutes": true
+    "extra": {
+      "supabaseUrl": "https://lpnezwwahjqswiowdkez.supabase.co",
+      "supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxwbmV6d3dhaGpxc3dpb3dka2V6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMwMjcwMzMsImV4cCI6MjA1ODYwMzAzM30.CTJY-2Dky7fZu0i0GFWvIdQAFCRfhJFoaa_ynAUTfD8"
     }
   }
 }
